@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorUsuarios">
+   <top>
+      <Pane opacity="0.88" prefHeight="54.0" prefWidth="472.0" style="-fx-background-color: #113d50; -fx-border-color: #113d50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="109.0" layoutY="16.0" text="Control de Usuarios" textFill="#f5eeee">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane opacity="0.89" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c9d6e0;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="campoNombre" layoutX="22.0" layoutY="57.0" prefHeight="25.0" prefWidth="193.0" promptText="Nombre / A Paterno / A Materno" />
+            <PasswordField fx:id="campoContrasenia" layoutX="22.0" layoutY="141.0" prefHeight="25.0" prefWidth="194.0" promptText="Contraseña" />
+            <PasswordField fx:id="campoRepetirContrasenia" layoutX="22.0" layoutY="184.0" prefHeight="25.0" prefWidth="195.0" promptText="Repetir Contraseña" />
+            <ComboBox fx:id="comboBoxNivel" layoutX="22.0" layoutY="228.0" prefHeight="25.0" prefWidth="135.0" />
+            <ComboBox fx:id="comboBoxEstado" layoutX="22.0" layoutY="268.0" prefHeight="25.0" prefWidth="137.0" />
+            <Label layoutX="23.0" layoutY="41.0" text="Nombre" textFill="#113d50" />
+            <Label layoutX="23.0" layoutY="124.0" text="Contraseña" textFill="#113d50" />
+            <Label layoutX="23.0" layoutY="166.0" text="Repetir contraseña" textFill="#113d50" />
+            <TableView fx:id="tablaUsuarios" layoutX="220.0" layoutY="53.0" prefHeight="252.0" prefWidth="396.0">
+              <columns>
+                <TableColumn prefWidth="154.0" text="Nombre">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="nombre" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="107.0" text="Usuario">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="alias" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="60.0" text="Nivel">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="nivel" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="74.0" text="Estado">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="estado" />
+                  </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+            <TextField fx:id="campoBuscar" layoutX="64.0" layoutY="10.0" prefHeight="22.0" prefWidth="253.0" promptText="BUSCAR" />
+            <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@buscar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="210.0" text="Nivel de acceso" textFill="#113d50" />
+            <Label layoutX="23.0" layoutY="250.0" text="Estado" textFill="#113d50" />
+            <Button fx:id="botonGuardar" defaultButton="true" layoutX="22.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="30.0" prefWidth="85.0" text="Guardar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonCancelar" defaultButton="true" layoutX="121.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="30.0" prefWidth="85.0" text="Cancelar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="campoAlias" layoutX="22.0" layoutY="98.0" prefHeight="25.0" prefWidth="193.0" promptText="Alias usuario" />
+            <Label layoutX="23.0" layoutY="82.0" text="Alias usuario" textFill="#113d50" />
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <Pane prefHeight="382.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="4.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@usuarios2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botonModificar" defaultButton="true" layoutX="24.0" layoutY="62.0" mnemonicParsing="false" onAction="#clickModificar" prefHeight="30.0" prefWidth="85.0" text="Modificar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonNuevo" defaultButton="true" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" onAction="#clickNuevo" prefHeight="30.0" prefWidth="85.0" text="Nuevo" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonEliminar" defaultButton="true" layoutX="24.0" layoutY="101.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="30.0" prefWidth="85.0" text="Eliminar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+   <bottom>
+      <Pane prefHeight="18.0" prefWidth="638.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
