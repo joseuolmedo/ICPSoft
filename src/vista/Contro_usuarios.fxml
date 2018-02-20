@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -14,9 +20,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorUsuarios">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="805.0" style="-fx-border-color: #113d50;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorUsuarios">
    <top>
-      <Pane opacity="0.88" prefHeight="54.0" prefWidth="472.0" style="-fx-background-color: #113d50; -fx-border-color: #113d50;" BorderPane.alignment="CENTER">
+      <Pane opacity="0.82" prefHeight="54.0" prefWidth="472.0" style="-fx-background-color: #113d50; -fx-border-color: #113d50;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="109.0" layoutY="16.0" text="Control de Usuarios" textFill="#f5eeee">
                <font>
@@ -37,7 +43,7 @@
             <Label layoutX="23.0" layoutY="41.0" text="Nombre" textFill="#113d50" />
             <Label layoutX="23.0" layoutY="124.0" text="Contraseña" textFill="#113d50" />
             <Label layoutX="23.0" layoutY="166.0" text="Repetir contraseña" textFill="#113d50" />
-            <TableView fx:id="tablaUsuarios" layoutX="220.0" layoutY="53.0" prefHeight="252.0" prefWidth="396.0">
+            <TableView fx:id="tablaUsuarios" layoutX="220.0" layoutY="53.0" prefHeight="306.0" prefWidth="448.0">
               <columns>
                 <TableColumn prefWidth="154.0" text="Nombre">
                   <cellValueFactory>
@@ -69,25 +75,36 @@
             </ImageView>
             <Label layoutX="23.0" layoutY="210.0" text="Nivel de acceso" textFill="#113d50" />
             <Label layoutX="23.0" layoutY="250.0" text="Estado" textFill="#113d50" />
-            <Button fx:id="botonGuardar" defaultButton="true" layoutX="22.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="30.0" prefWidth="85.0" text="Guardar" textFill="#356378">
+            <Button fx:id="botonGuardar" defaultButton="true" layoutX="22.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="30.0" prefWidth="85.0" text="Guardar" textFill="#356378">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="botonCancelar" defaultButton="true" layoutX="121.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="30.0" prefWidth="85.0" text="Cancelar" textFill="#356378">
+            <Button fx:id="botonCancelar" defaultButton="true" layoutX="121.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="30.0" prefWidth="85.0" text="Cancelar" textFill="#356378">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
             <TextField fx:id="campoAlias" layoutX="22.0" layoutY="98.0" prefHeight="25.0" prefWidth="193.0" promptText="Alias usuario" />
             <Label layoutX="23.0" layoutY="82.0" text="Alias usuario" textFill="#113d50" />
+            <Label fx:id="Lvalidaciones" layoutX="16.0" layoutY="410.0" prefHeight="17.0" prefWidth="307.0" text="*Label destinado a las validaciones" textFill="#d31111" />
+            <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="220.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@iconPDF.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botonPdf" alignment="TOP_LEFT" contentDisplay="RIGHT" defaultButton="true" layoutX="287.0" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="87.0" text="Descargar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </center>
    <left>
       <Pane prefHeight="382.0" prefWidth="132.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="4.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="4.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@usuarios2.png" />
                </image>
@@ -111,6 +128,6 @@
       </Pane>
    </left>
    <bottom>
-      <Pane prefHeight="18.0" prefWidth="638.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="18.0" prefWidth="638.0" style="-fx-background-color: #356378;" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

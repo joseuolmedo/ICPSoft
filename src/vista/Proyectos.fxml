@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="806.0" style="-fx-border-color: #113d50;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane opacity="0.82" prefHeight="54.0" prefWidth="472.0" style="-fx-background-color: #113d50; -fx-border-color: #113d50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="109.0" layoutY="16.0" text="Administrar Proyectos" textFill="#f5eeee">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoBuscar" layoutX="472.0" layoutY="15.0" prefHeight="22.0" prefWidth="253.0" promptText="BUSCAR" />
+            <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="423.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@buscar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="382.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="4.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@11aaaengrenagem.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="botonModificar" defaultButton="true" layoutX="24.0" layoutY="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Modificar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonNuevo" defaultButton="true" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Nuevo" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonEliminar" defaultButton="true" layoutX="24.0" layoutY="101.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Eliminar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+   <bottom>
+      <Pane prefHeight="18.0" prefWidth="638.0" style="-fx-background-color: #356378;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane cacheHint="QUALITY" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="5.0" layoutY="15.0" prefHeight="336.0" prefWidth="263.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" opacity="0.9" prefHeight="586.0" prefWidth="243.0" spacing="5.0" style="-fx-background-color: #c9d6e0;">
+                     <children>
+                        <Label text="Nombre del Proyecto" />
+                        <TextField fx:id="campoNombreProyecto" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Descripción" />
+                        <TextField fx:id="campoDescripcion" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Objetivo" />
+                        <TextField fx:id="campoObjetivo" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Cliente" />
+                        <TextField fx:id="campoCliente" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Fecha inicio" />
+                        <DatePicker fx:id="selectorFechaInicio" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Fecha de término" />
+                        <DatePicker fx:id="selectorFechaTermino" minWidth="-Infinity" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Modelo de estimación" />
+                        <ComboBox fx:id="comboBoxModeloEstimacion" prefHeight="25.0" prefWidth="180.0" />
+                        <Label prefWidth="180.0" text="Líder del proyecto" />
+                        <TextField fx:id="campoLiderProyecto" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Tecnologías" />
+                        <TextField fx:id="campoTecnologias" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Tarifa/Precio" />
+                        <TextField fx:id="campoTarifa" prefHeight="25.0" prefWidth="180.0" />
+                        <Label text="Promedio de venta" />
+                        <TextField fx:id="campoPromedioVenta" prefHeight="25.0" prefWidth="180.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <TableView fx:id="tablaProyectos" layoutX="278.0" layoutY="14.0" mouseTransparent="true" opacity="0.8" prefHeight="339.0" prefWidth="387.0">
+              <columns>
+                <TableColumn prefWidth="137.0" text="Nombre " />
+                <TableColumn prefWidth="111.0" text="Cliente" />
+                  <TableColumn prefWidth="138.0" text="Lider De Proyecto" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TableView>
+            <Button fx:id="botonGuardar" defaultButton="true" layoutX="36.0" layoutY="358.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Guardar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonCancelar" defaultButton="true" layoutX="140.0" layoutY="358.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Cancelar" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="LblValidacion" layoutX="11.0" layoutY="403.0" prefHeight="17.0" prefWidth="265.0" text="*Mensajes destinado a la validacion de campos" textFill="#eb2929" />
+            <Button fx:id="botonCancelar1" defaultButton="true" layoutX="355.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" text="DESCARGAR" textFill="#356378">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="69.0" fitWidth="85.0" layoutX="287.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@iconPDF.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

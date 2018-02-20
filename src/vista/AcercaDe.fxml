@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="294.0" fitWidth="334.0" layoutX="114.0" layoutY="7.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@info.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="200.0" layoutY="38.0" text="Version  2.0" />
+            <Label layoutX="182.0" layoutY="64.0" text="Copyright" />
+            <Label layoutX="244.0" layoutY="64.0" text="®2018 " />
+            <Label layoutX="62.0" layoutY="86.0" text="1.-ICPSOFT  es una aplicacion desarrolada por alumnos de la utcv. &#10;" textAlignment="CENTER" />
+            <Label layoutX="80.0" layoutY="190.0" text="Para mayor información puede comunicarse a los siguientes correos:" />
+            <Label layoutX="216.0" layoutY="220.0" text="11598@utv.edu.mx" />
+            <Label layoutX="216.0" layoutY="237.0" text="11370@utv.edu.mx" />
+            <Label layoutX="216.0" layoutY="254.0" text="11071@utv.edu.mx" />
+            <Label layoutX="220.0" layoutY="268.0" text="2686@utv.edu.mx" />
+            <Label layoutX="88.0" layoutY="120.0" prefHeight="32.0" prefWidth="355.0" text="2.- Queda prohibida la distribución o modificacion de.&#10;este software." textAlignment="CENTER" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane opacity="0.82" prefHeight="41.0" prefWidth="600.0" style="-fx-background-color: #113d50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="125.0" layoutY="8.0" text="Acerca de la Aplicación" textFill="#f8f3f3">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane opacity="0.82" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #113d50;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Pane opacity="0.82" prefHeight="324.0" prefWidth="70.0" style="-fx-background-color: #c9d6e0;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
