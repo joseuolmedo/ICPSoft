@@ -23,6 +23,6 @@ public class Conexion{
 	}
 	
 	public Connection conectar() throws SQLException{
-		return DriverManager.getConnection("jdbc:postgresql://localhost:5432/Universidad", "postgres", "utcvtic");
+		return DriverManager.getConnection("jdbc:postgresql://localhost:5432/metricas", "postgres", "03tu1215");
 	}
 }

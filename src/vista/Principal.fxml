@@ -112,7 +112,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="botonInfo" layoutX="17.0" layoutY="443.0" onAction="#clickInfo" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #c9d6e0;" text="Acerca de&#10;la aplicación" textFill="#356378" underline="true">
+            <Button fx:id="" layoutX="17.0" layoutY="443.0"  mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #c9d6e0;" text="Acerca de&#10;la aplicación" textFill="#356378" underline="true">
                <font>
                   <Font size="13.0" />
                </font>
